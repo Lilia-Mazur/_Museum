@@ -1,0 +1,97 @@
+.menu {
+  background-color: #0008;
+  height: 100vh;
+
+  z-index: 2;
+  overflow-x: auto;
+
+  &__content {
+    background-color: $grean;
+    padding: 7px 0 27px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-items {
+      flex-grow: 2;
+      display: flex;
+      justify-content: space-around
+    }
+
+  }
+  &__icon {
+    @include onTablet {
+      padding-right: 45px;
+    }
+  }
+
+  &__icon-close {
+    width: 13px;
+    height: 13px;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+
+  &__text {
+    @extend %text;
+    color: $white;
+    line-height: 150%;
+  }
+
+  &__link {
+    display: block;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: all 0.3s;
+
+    @include onDesktop {
+      font-size: 22px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__line {
+    height: 1px;
+  
+    background-color: $white;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      width: 1px;
+      height: 145px;
+      margin: 0 40px;
+    }
+  }
+  &__schedule {
+    &-time {
+      margin-bottom: 16px;
+    }
+
+    &-close {
+      @include onTablet {
+        width: 50%;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-content {
+      @include onTablet {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
